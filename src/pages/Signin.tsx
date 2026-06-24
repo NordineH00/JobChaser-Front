@@ -81,7 +81,7 @@ export default function Signin() {
             </button>
 
             <p className="text-sm font-light text-gray-500">
-              Vous n'avez pas de compte ?
+              Vous n'avez pas de compte ?{' '}
               <a
                 onClick={() => navigate('/signup')}
                 className="font-medium text-primary-600 hover:underline cursor-pointer"
