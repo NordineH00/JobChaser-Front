@@ -7,7 +7,6 @@ import { createAddress } from "../api/address.api";
 import type { CompanyCreate } from "../interfaces/companies.interface";
 import { createCompany } from "../api/company.api";
 import { createApplication, updateApplication } from "../api/application.api";
-import { registrationNumberParsed } from "../utils/convert";
 
 
 const CreateApplication = () => {
@@ -39,7 +38,7 @@ const CreateApplication = () => {
                 }
                 const companyPayload: CompanyCreate = {
                     name: data.name,
-                    registrationNumber: registrationNumberParsed(data.registrationNumber) || undefined,
+                    registrationNumber: data.registrationNumber?.trim() || undefined,
                     comment: data.comment || undefined,
                     isFavorite: false,
                     ...(addressId ? { addressId } : {})

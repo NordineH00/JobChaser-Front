@@ -1,4 +1,4 @@
-import type { MimeType } from "../interfaces/relation.interface";
+import type { MimeType } from "../interfaces/documents.interface";
 import type { MIME_TYPE_Row } from "../interfaces/typesDB.interface";
 
 export function mapDbToMimeType(row: MIME_TYPE_Row): MimeType {

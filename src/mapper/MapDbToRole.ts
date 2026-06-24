@@ -1,4 +1,4 @@
-import type { Role } from "../interfaces/relation.interface";
+import type { Role } from "../interfaces/users.interface";
 import type { ROLE_Row } from "../interfaces/typesDB.interface";
 
 export function mapDbToRole(row: ROLE_Row): Role {

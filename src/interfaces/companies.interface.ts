@@ -5,7 +5,7 @@ import type { } from "./relation.interface";
 export interface Company {
     id: string;
     name: string;
-    registrationNumber?: string | undefined;
+    registrationNumber?: string | null;
     comment?: string | null;
     addressId: string;
     address?: Address;
@@ -17,7 +17,7 @@ export interface Company {
 
 export interface CompanyForm {
     name: string;
-    registrationNumber?: string | undefined;
+    registrationNumber?: string | null;
     comment?: string | null;
     addressId: string;
     streetName: string;
@@ -31,7 +31,7 @@ export interface CompanyForm {
 
 export interface CompanyCreate {
     name: string;
-    registrationNumber?: number | undefined;
+    registrationNumber?: string | null;
     comment?: string | null;
     addressId?: string;
     isFavorite: boolean;

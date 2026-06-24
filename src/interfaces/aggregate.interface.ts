@@ -1,4 +1,10 @@
-import type { Address, Application, Company, DocType } from "./relation.interface";
+
+import type {DocType} from "./documents.interface";
+import type {Address} from "./address.interface"
+import type  {Application} from "./applications.interface";
+import type  {Event} from "./events.interface";
+import type  {Document} from "./documents.interface";
+import type {Company} from "./companies.interface";
 
 
 export type DocumentWithType = Document & { docType: DocType | null };

@@ -1,4 +1,4 @@
-import type { DocType } from "../interfaces/relation.interface";
+import type { DocType } from "../interfaces/documents.interface";
 import type { DOCUMENT_TYPE_Row } from "../interfaces/typesDB.interface";
 
 export function mapDbToDocType(row: DOCUMENT_TYPE_Row): DocType {
@@ -8,7 +8,7 @@ export function mapDbToDocType(row: DOCUMENT_TYPE_Row): DocType {
         description: row.description ?? null,
         createdAt: new Date(row.created_at),
         updatedAt: new Date(row.updated_at),
-    };
+    } as DocType;
 }
 
 export function mapDocTypeToDb(dt: DocType): DOCUMENT_TYPE_Row {

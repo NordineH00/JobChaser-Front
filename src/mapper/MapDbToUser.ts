@@ -1,5 +1,5 @@
 import type { USER_Row } from "../interfaces/typesDB.interface";
-import type { User } from "../interfaces/relation.interface";
+import type { User } from "../interfaces/users.interface";
 
 export function mapDbToUser(row: USER_Row): User {
     return {

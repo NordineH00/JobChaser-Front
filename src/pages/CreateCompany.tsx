@@ -5,7 +5,6 @@ import { createCompany, updateCompany } from "../api/company.api";
 import { createAddress } from "../api/address.api";
 import type { AddressCreate } from "../interfaces/address.interface";
 import { useNavigate } from "react-router";
-import { registrationNumberParsed } from "../utils/convert";
 
 
 const CreateCompany = () => {
@@ -32,7 +31,7 @@ const CreateCompany = () => {
 
             const companyPayload: CompanyCreate = {
                 name: data.name,
-                registrationNumber: registrationNumberParsed(data.registrationNumber) || undefined,
+                registrationNumber: data.registrationNumber?.trim() || undefined,
                 comment: data.comment ?? null,
                 isFavorite: false,
                 ...(addressId ? { addressId } : {})

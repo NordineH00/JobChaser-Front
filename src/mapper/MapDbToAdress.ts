@@ -1,4 +1,4 @@
-import type { Address } from "../interfaces/relation.interface";
+import type { Address } from "../interfaces/address.interface";
 import type { ADDRESS_Row } from "../interfaces/typesDB.interface";
 
 

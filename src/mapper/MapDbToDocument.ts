@@ -1,5 +1,5 @@
 import type { DOCUMENT_Row } from "../interfaces/typesDB.interface";
-import type { Document } from "../interfaces/relation.interface";
+import type { Document } from "../interfaces/documents.interface";
 
 export function mapDbToDocument(row: DOCUMENT_Row): Document {
     return {

@@ -1,4 +1,4 @@
-import type { Permission } from "../interfaces/relation.interface";
+import type { Permission } from "../interfaces/users.interface";
 import type { PERMISSION_Row } from "../interfaces/typesDB.interface";
 
 export function mapDbToPermission(row: PERMISSION_Row): Permission {

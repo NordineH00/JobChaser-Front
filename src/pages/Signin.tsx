@@ -5,7 +5,7 @@ import { authService } from '../services/auth.service';
 import { useAuthStore } from '../stores/auth.store';
 
 export default function Signin() {
-  const { register, handleSubmit, formState: { errors } } = useForm<SigninData>();
+  const { register, handleSubmit } = useForm<SigninData>();
   const signinMutation = authService.signin();
   const { setSession } = useAuthStore();
 

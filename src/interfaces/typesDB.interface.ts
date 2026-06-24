@@ -29,7 +29,7 @@ export interface ADDRESS_Row {
 export interface COMPANY_Row {
     id: string;
     name: string;
-    registration_number: number | null;
+    registration_number: string | null;
     comment: string | null;
     user_id: string;
     address_id: string;

@@ -1,4 +1,4 @@
-import type { Event } from "../interfaces/relation.interface";
+import type { Event } from "../interfaces/events.interface";
 import type { EVENT_Row } from "../interfaces/typesDB.interface";
 
 export function mapDbToEvent(row: EVENT_Row): Event {
@@ -33,7 +33,7 @@ export function mapEventToDb(event: Event): EVENT_Row {
     remark: event.remark || null,
     user_id: event.userId,
     company_id: event.companyId || null,
-    address_id: event.addressId,
+    address_id: event.addressId ?? "",
     application_id: event.applicationId || null,
     is_remote: event.isRemote,
     meeting_URL: event.meetingURL || null,

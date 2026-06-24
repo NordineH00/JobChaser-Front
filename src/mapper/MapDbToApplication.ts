@@ -1,5 +1,5 @@
 
-import type { Application } from "../interfaces/relation.interface";
+import type { Application } from "../interfaces/applications.interface";
 import type { APPLICATION_Row } from "../interfaces/typesDB.interface";
 
 export function mapDbToApplication(row: APPLICATION_Row): Application {

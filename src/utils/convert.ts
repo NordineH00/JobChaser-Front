@@ -1,14 +1,6 @@
 export const toDate = (s: string | null | undefined) => (s ? new Date(s) : null);
 export const toIso = (d: Date | null | undefined) => (d ? d.toISOString() : null);
 
-export const registrationNumberParsed = (
-    value?: string | null
-): number | undefined => {
-    if (!value || value.trim() === "") return undefined;
-    const parsed = Number(value);
-    return Number.isNaN(parsed) ? undefined : parsed;
-};
-
 // Convertir date ISO en francçais
 export const dateStr = (date: string | Date): string => {
     const d = typeof date === "string" ? new Date(date) : date;

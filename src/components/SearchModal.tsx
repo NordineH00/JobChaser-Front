@@ -29,9 +29,9 @@ const SearchModal: React.FC = () => {
 
     const evts = events.filter(
       (event: Event) =>
-        event.jobTitle.toLowerCase().includes(q) ||
-        event.companyName.toLowerCase().includes(q) ||
-        event.eventType.toLowerCase().includes(q)
+        event.name.toLowerCase().includes(q) ||
+        event.company?.name?.toLowerCase().includes(q) ||
+        event.eventType?.toLowerCase().includes(q)
     );
 
     setResults([...apps, ...evts]);

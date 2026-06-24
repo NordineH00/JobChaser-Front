@@ -1,6 +1,6 @@
 
 import { useCompStore } from "../stores/company.store";
-import type { Company } from "../interfaces/relation.interface";
+import type { Company } from "../interfaces/companies.interface";
 
 export function getOneComp(companyId: Company["id"]): Company | null {
     const companys = useCompStore((state) => state.comps)
